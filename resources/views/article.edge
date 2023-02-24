@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdonisJS - A fully featured web framework for Node.js</title>
+  @entryPointStyles('app')
+  @entryPointScripts('app')
+</head>
+<body>
+ @include('partials/header')
+
+  <main>
+  {{--  <h1>Page des articles</h1>
+  <h2>Bonjour {{prenom}}</h2>
+  @if(isAdmin)
+    <p>Vous êtes un Admin</p>      
+    @else
+      <p>Vous n'êtes pas un Admin</p>
+  @end
+
+  @each(hobbie in hobbies)
+    <p>{{hobbie}}</p>
+  @end  --}}
+
+  
+    @each(article in articles)
+    <article class="art">
+      <h2>{{ article.title}}</h2>
+      <p>{{article.content}}</p>
+      </article>
+    @end
+   
+  </main>
+
+  @include('partials/footer')
+</body>
+</html>
