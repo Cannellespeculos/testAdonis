@@ -20,6 +20,7 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 import ArticlesController from 'App/Controllers/Http/ArticlesController'
+import RecipesController from 'App/Controllers/Http/RecipesController'
 
 Route.get('/', async ({ view }) => {
   return view.render('welcome')
@@ -35,4 +36,8 @@ Route.get('/about', async ({ view }) => {
 
 Route.get('/article', async ({ view }) => {
   return view.render('article', new ArticlesController().index())
+})
+
+Route.get('/recipes', async ({ view }) => {
+  return view.render('recipes', new RecipesController().index())
 })
